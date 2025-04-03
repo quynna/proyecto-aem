@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Created-By: Apache Jackrabbit FileVault - Package Maven Plugin 1.1.6
+Build-Jdk-Spec: 21
+Implementation-Title: JA Developer - UI content
+Implementation-Version: 1.0.0-SNAPSHOT
+Content-Package-Type: content
+Content-Package-Id: com.jadeveloper:ja-developer.ui.content:1.0.0-SNAPSH
+ OT
+Content-Package-Description: UI content package for JA Developer
+Content-Package-Dependencies: com.jadeveloper:ja-developer.ui.apps:1.0.0
+ -SNAPSHOT
+Content-Package-Dependencies-Locations: com.jadeveloper:ja-developer.ui.
+ apps:1.0.0-SNAPSHOT=maven:com.jadeveloper:ja-developer.ui.apps:1.0.0-SN
+ APSHOT:zip
+Content-Package-Roots: /conf/ja-developer,/content/dam/ja-developer,/con
+ tent/dam/ja-developer/asset.jpg,/content/experience-fragments/ja-develo
+ per,/content/ja-developer
+
