@@ -1,0 +1,46 @@
+<!-- Uso de Sling Models y ClientLibs -->
+<sly data-sly-use.model="com.jadeveloper.core.models.DynamicSearchCardsModel"
+     data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" />
+
+<!-- Incluir los estilos del componente -->
+<sly data-sly-call="${clientLib.css @ categories='ja-developer.dynamicsearchcards'}" />
+
+<!-- Componente Dynamic Search Cards -->
+<div class="cmp-dynamic-search-cards"
+     data-endpoint="${model.externalApiEndpoint @ context='unsafe'}"
+     role="region"
+     aria-label="Búsqueda dinámica de tarjetas">
+
+    <!-- Título configurado -->
+    <h2 data-sly-text="${model.title}">Título por defecto</h2>
+
+    <!-- Campo de búsqueda con etiqueta visualmente oculta para accesibilidad -->
+    <div class="cmp-search-input">
+        <label for="search-input" class="visually-hidden">Buscar tarjetas</label>
+        <input type="text"
+               id="search-input"
+               placeholder="Buscar tarjetas..."
+               aria-label="Buscar contenido" />
+    </div>
+
+    <!-- Contenedor de filtros por categoría -->
+    <nav id="tag-filters" class="cmp-tag-filters"
+         role="navigation"
+         aria-label="Filtrar por categoría">
+        <!-- Los filtros se generarán dinámicamente -->
+    </nav>
+
+    <!-- Loader para indicar que se están cargando las tarjetas -->
+    <div id="cards-loading" class="cmp-cards-loading" aria-hidden="true">
+        <div class="spinner"></div>
+        <span>Cargando tarjetas...</span>
+    </div>
+
+    <!-- Contenedor donde se renderizarán las tarjetas -->
+    <div id="cards-container" class="cmp-cards-container" role="list">
+        <!-- El contenido se inyectará dinámicamente mediante JavaScript -->
+    </div>
+</div>
+
+<!-- Incluir los scripts del componente -->
+<sly data-sly-call="${clientLib.js @ categories='ja-developer.dynamicsearchcards'}" />

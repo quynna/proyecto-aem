@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Created-By: Apache Jackrabbit FileVault - Package Maven Plugin 1.1.6
+Build-Jdk-Spec: 21
+Implementation-Title: JA Developer - UI apps
+Implementation-Version: 1.0.0-SNAPSHOT
+Content-Package-Type: application
+Content-Package-Id: com.jadeveloper:ja-developer.ui.apps:1.0.0-SNAPSHOT
+Content-Package-Description: UI apps package for JA Developer
+Content-Package-Roots: /apps/ja-developer/clientlibs,/apps/ja-developer/
+ components,/apps/ja-developer/i18n
+Import-Package: com.adobe.cq.wcm.core.components.models;version="[12.29.
+ 0,13.0.0)",com.jadeveloper.core.models;version="[1.0.0,2.0.0)",org.apac
+ he.sling.scripting.sightly;version="[2.0.0,3.0.0)"
+

@@ -1,0 +1,4 @@
+com\jadeveloper\core\it\tests\GetPageIT.class
+com\jadeveloper\core\it\tests\HtmlUnitClient.class
+com\jadeveloper\core\it\tests\PublishPageValidationIT.class
+com\jadeveloper\core\it\tests\CreatePageIT.class
