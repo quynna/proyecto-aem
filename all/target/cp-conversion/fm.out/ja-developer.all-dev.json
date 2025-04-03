@@ -1,0 +1,10 @@
+{
+  "id":"com.jadeveloper:ja-developer.all:slingosgifeature:dev:1.0.0-SNAPSHOT",
+  "configurations":  {
+    "com.jadeveloper.core.services.impl.ExternalApiServiceImpl":    {
+      "endpointUrl":"https://api.rawg.io/api/games?key=d4be932dbd8b4f77b89d9c076a564a07&dates=2024-01-01,2024-12-31&platforms=18,1,7",
+      "timeout":3000,
+      ":configurator:content-package-origins":"com.jadeveloper:ja-developer.all:1.0.0-SNAPSHOT|com.jadeveloper:ja-developer.ui.config:1.0.0-SNAPSHOT"
+    }
+  }
+}

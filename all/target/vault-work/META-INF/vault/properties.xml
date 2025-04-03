@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>JA Developer - All</comment>
+<entry key="allowIndexDefinitions">false</entry>
+<entry key="created">2025-04-03T06:10:59.512Z</entry>
+<entry key="groupId">com.jadeveloper</entry>
+<entry key="name">ja-developer.all</entry>
+<entry key="description">All content package for JA Developer</entry>
+<entry key="artifactId">ja-developer.all</entry>
+<entry key="version">1.0.0-SNAPSHOT</entry>
+<entry key="packageType">container</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="group">com.jadeveloper</entry>
+</properties>

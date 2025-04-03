@@ -1,0 +1,108 @@
+{
+  "id":"com.jadeveloper:ja-developer.all:slingosgifeature:user-aggregated-publish.dev:1.0.0-SNAPSHOT",
+  "bundles":[
+    {
+      "id":"com.jadeveloper:ja-developer.core:1.0.0-SNAPSHOT",
+      "feature-origins":"com.jadeveloper:ja-developer.all:slingosgifeature:1.0.0-SNAPSHOT",
+      "Bundle-SymbolicName":"ja-developer.core",
+      "Bundle-Version":"1.0.0.SNAPSHOT",
+      "start-order":"20",
+      "content-package-origins":"com.jadeveloper:ja-developer.all:1.0.0-SNAPSHOT"
+    }
+  ],
+  "configurations":  {
+    "com.adobe.cq.wcm.core.components.internal.servlets.TableOfContentsFilter~ja-developer":    {
+      ":configurator:content-package-origins":"com.jadeveloper:ja-developer.all:1.0.0-SNAPSHOT|com.jadeveloper:ja-developer.ui.config:1.0.0-SNAPSHOT",
+      "enabled":"true",
+      ":configurator:feature-origins-enabled":[
+        "com.jadeveloper:ja-developer.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins":[
+        "com.jadeveloper:ja-developer.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ]
+    },
+    "org.apache.sling.commons.log.LogManager.factory.config~ja-developer":    {
+      ":configurator:content-package-origins":"com.jadeveloper:ja-developer.all:1.0.0-SNAPSHOT|com.jadeveloper:ja-developer.ui.config:1.0.0-SNAPSHOT",
+      "org.apache.sling.commons.log.names":[
+        "com.jadeveloper.core"
+      ],
+      "org.apache.sling.commons.log.level":"INFO",
+      "org.apache.sling.commons.log.file":"logs/error.log",
+      "org.apache.sling.commons.log.additiv":"false",
+      ":configurator:feature-origins-org.apache.sling.commons.log.names":[
+        "com.jadeveloper:ja-developer.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-org.apache.sling.commons.log.file":[
+        "com.jadeveloper:ja-developer.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-org.apache.sling.commons.log.level":[
+        "com.jadeveloper:ja-developer.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-org.apache.sling.commons.log.additiv":[
+        "com.jadeveloper:ja-developer.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins":[
+        "com.jadeveloper:ja-developer.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ]
+    },
+    "com.jadeveloper.core.services.impl.ExternalApiServiceImpl":    {
+      ":configurator:content-package-origins":"com.jadeveloper:ja-developer.all:1.0.0-SNAPSHOT|com.jadeveloper:ja-developer.ui.config:1.0.0-SNAPSHOT",
+      "endpointUrl":"https://api.rawg.io/api/games?key=d4be932dbd8b4f77b89d9c076a564a07&dates=2024-01-01,2024-12-31&platforms=18,1,7",
+      "timeout":3000,
+      ":configurator:feature-origins-endpointUrl":[
+        "com.jadeveloper:ja-developer.all:slingosgifeature:dev:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-timeout":[
+        "com.jadeveloper:ja-developer.all:slingosgifeature:dev:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins":[
+        "com.jadeveloper:ja-developer.all:slingosgifeature:dev:1.0.0-SNAPSHOT"
+      ]
+    }
+  },
+  "assembled-features:ARTIFACTS|TRANSIENT":[
+    "com.jadeveloper:ja-developer.all:slingosgifeature:1.0.0-SNAPSHOT",
+    "com.jadeveloper:ja-developer.all:slingosgifeature:dev:1.0.0-SNAPSHOT"
+  ],
+  "content-packages:ARTIFACTS|true":[
+    {
+      "id":"com.jadeveloper:ja-developer.ui.apps:zip:cp2fm-converted:1.0.0-SNAPSHOT",
+      "feature-origins":"com.jadeveloper:ja-developer.all:slingosgifeature:1.0.0-SNAPSHOT"
+    },
+    {
+      "id":"com.jadeveloper:ja-developer.ui.config:zip:cp2fm-converted:1.0.0-SNAPSHOT",
+      "feature-origins":"com.jadeveloper:ja-developer.all:slingosgifeature:1.0.0-SNAPSHOT"
+    },
+    {
+      "id":"com.jadeveloper:ja-developer.all:zip:cp2fm-converted:1.0.0-SNAPSHOT",
+      "feature-origins":"com.jadeveloper:ja-developer.all:slingosgifeature:1.0.0-SNAPSHOT"
+    }
+  ],
+  "repoinit:TEXT|true":[
+    "# origin=com.jadeveloper:ja-developer.all:1.0.0-SNAPSHOT|com.jadeveloper:ja-developer.ui.config:1.0.0-SNAPSHOT source=org.apache.sling.jcr.repoinit.RepositoryInitializer~ja-developer\r",
+    "create path (sling:OrderedFolder) /content/dam/ja-developer\r",
+    "create path (nt:unstructured) /content/dam/ja-developer/jcr:content\r",
+    "set properties on /content/dam/ja-developer/jcr:content",
+    "  set cq:conf{String} to /conf/ja-developer",
+    "  set jcr:title{String} to \"JA Developer\"",
+    "end"
+  ],
+  "api-regions:JSON|false":[
+    {
+      "name":"global",
+      "exports":[
+        "com.jadeveloper.core.filters",
+        "com.jadeveloper.core.listeners",
+        "com.jadeveloper.core.models",
+        "com.jadeveloper.core.schedulers",
+        "com.jadeveloper.core.servlets"
+      ],
+      "feature-origins":[
+        "com.jadeveloper:ja-developer.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ]
+    }
+  ],
+  "artifact-rules:JSON|false":{
+
+  }
+}

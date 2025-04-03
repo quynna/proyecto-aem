@@ -1,0 +1,6 @@
+com\jadeveloper\core\listeners\SimpleResourceListenerTest.class
+com\jadeveloper\core\services\impl\ExternalApiServiceImplTest.class
+com\jadeveloper\core\servlets\SimpleServletTest.class
+com\jadeveloper\core\schedulers\SimpleScheduledTaskTest.class
+com\jadeveloper\core\filters\LoggingFilterTest.class
+com\jadeveloper\core\servlets\SearchCardsServletTest.class

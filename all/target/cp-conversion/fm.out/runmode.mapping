@@ -1,0 +1,7 @@
+#File edited by the Apache Sling Content Package to Sling Feature converter
+#Wed Apr 02 18:03:50 CLST 2025
+prod=ja-developer.all-prod.json
+dev=ja-developer.all-dev.json
+stage=ja-developer.all-stage.json
+author=ja-developer.all-author.json
+(default)=ja-developer.all.json

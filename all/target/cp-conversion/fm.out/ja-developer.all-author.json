@@ -1,0 +1,36 @@
+{
+  "id":"com.jadeveloper:ja-developer.all:slingosgifeature:author:1.0.0-SNAPSHOT",
+  "configurations":  {
+    "com.adobe.granite.cors.impl.CORSPolicyImpl~ja-developer":    {
+      "alloworigin":[
+        "http://localhost:3000"
+      ],
+      "allowedpaths":[
+        "/(content|conf)/ja-developer.*"
+      ],
+      "supportedheaders":[
+        "Authorization",
+        "Origin",
+        "Accept",
+        "X-Requested-With",
+        "Content-Type",
+        "Access-Control-Request-Method",
+        "Access-Control-Request-Headers"
+      ],
+      "supportedmethods":[
+        "GET",
+        "HEAD"
+      ],
+      "alloworiginregexp":[
+      ],
+      ":configurator:content-package-origins":"com.jadeveloper:ja-developer.all:1.0.0-SNAPSHOT|com.jadeveloper:ja-developer.ui.config:1.0.0-SNAPSHOT"
+    },
+    "com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider~ja-developer":    {
+      "mobile.resourceTypes":[
+        "ja-developer/components/page"
+      ],
+      "README":"Indicate which page resource types should display the mobile emulators.",
+      ":configurator:content-package-origins":"com.jadeveloper:ja-developer.all:1.0.0-SNAPSHOT|com.jadeveloper:ja-developer.ui.config:1.0.0-SNAPSHOT"
+    }
+  }
+}

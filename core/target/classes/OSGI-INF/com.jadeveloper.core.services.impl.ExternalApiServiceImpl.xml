@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.jadeveloper.core.services.impl.ExternalApiServiceImpl" configuration-policy="require" activate="activate" modified="activate">
+  <property name="timeout" type="Integer" value="5000"/>
+  <service>
+    <provide interface="com.jadeveloper.core.services.ExternalApiService"/>
+  </service>
+  <implementation class="com.jadeveloper.core.services.impl.ExternalApiServiceImpl"/>
+</scr:component>
